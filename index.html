@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ÉLAN Clinic | Doctor-Led Skin & Aesthetics</title>
+
+<meta name="description"
+content="Discover doctor-led aesthetic and skin treatments in Gurgaon. Book a consultation with our dermatology team.">
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
+
+:root {
+    --cream: #f8f6f1;
+    --white: #ffffff;
+    --sage: #788575;
+    --dark: #292d27;
+    --grey: #777970;
+    --border: #e9e5dc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--cream);
+    color: var(--dark);
+    font-family: 'DM Sans', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 88%;
+    max-width: 1250px;
+    margin: auto;
+}
+
+/* NAVBAR */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 6%;
+    background: rgba(248,246,241,0.95);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    letter-spacing: 3px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    font-size: 13px;
+}
+
+.nav-links a:hover {
+    color: var(--sage);
+}
+
+.btn {
+    background: var(--sage);
+    color: white;
+    padding: 15px 25px;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--dark);
+}
+
+.menu {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    background:
+    linear-gradient(90deg,
+    rgba(248,246,241,0.98) 10%,
+    rgba(248,246,241,0.80) 48%,
+    rgba(248,246,241,0.05) 100%),
+    url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1800&q=85');
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    width: 55%;
+    padding: 80px 0;
+}
+
+.tag {
+    color: var(--sage);
+    letter-spacing: 3px;
+    font-size: 11px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    color: var(--grey);
+    max-width: 450px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.secondary {
+    border: 1px solid var(--dark);
+    padding: 14px 23px;
+    margin-left: 12px;
+    font-size: 13px;
+}
+
+/* TRUST */
+
+.trust {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    background: white;
+    padding: 35px 6%;
+    text-align: center;
+    gap: 20px;
+}
+
+.trust h3 {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.trust p {
+    font-size: 12px;
+    color: var(--grey);
+}
+
+/* GENERAL SECTIONS */
+
+section {
+    padding: 100px 0;
+}
+
+.section-title {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 55px;
+}
+
+.section-title h2 {
+    font-size: 43px;
+    margin-bottom: 18px;
+}
+
+.section-title p {
+    color: var(--grey);
+    line-height: 1.8;
+}
+
+/* ABOUT */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 75px;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+}
+
+.about-text h2 {
+    font-size: 45px;
+    margin-bottom: 25px;
+}
+
+.about-text p {
+    color: var(--grey);
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+/* WHY US */
+
+.why {
+    background: white;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 35px;
+}
+
+.feature {
+    padding: 30px;
+    border: 1px solid var(--border);
+}
+
+.feature span {
+    font-size: 30px;
+}
+
+.feature h3 {
+    font-size: 23px;
+    margin: 20px 0 12px;
+}
+
+.feature p {
+    color: var(--grey);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* TREATMENTS */
+
+.treatment-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: var(--grey);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* TESTIMONIALS */
+
+.reviews {
+    background: #eeede6;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.review {
+    background: white;
+    padding: 35px;
+}
+
+.stars {
+    color: #b79a5b;
+    margin-bottom: 20px;
+}
+
+.review p {
+    color: var(--grey);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* PROCESS */
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+    text-align: center;
+}
+
+.step h3 {
+    margin: 15px 0;
+    font-size: 22px;
+}
+
+.step p {
+    color: var(--grey);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.number {
+    font-family: 'Playfair Display';
+    font-size: 38px;
+    color: var(--sage);
+}
+
+/* FAQ */
+
+.faq {
+    background: white;
+}
+
+details {
+    padding: 22px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+summary {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+details p {
+    color: var(--grey);
+    padding-top: 15px;
+    line-height: 1.8;
+}
+
+/* BOOKING */
+
+.booking {
+    background: #eaece5;
+}
+
+.booking-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.booking-text h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.booking-text p {
+    color: var(--grey);
+    line-height: 1.9;
+}
+
+form {
+    background: white;
+    padding: 35px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border);
+    font-family: inherit;
+    outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--sage);
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+form button {
+    width: 100%;
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--dark);
+    color: white;
+    padding: 65px 6%;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+}
+
+footer h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+footer p, footer a {
+    color: #c5c8bf;
+    font-size: 13px;
+    line-height: 2.2;
+}
+
+.disclaimer {
+    border-top: 1px solid #555a50;
+    margin-top: 40px;
+    padding-top: 25px;
+    color: #c5c8bf;
+    font-size: 11px;
+}
+
+/* WHATSAPP */
+
+.whatsapp {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25d366;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 40px;
+    z-index: 200;
+    font-size: 13px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px) {
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: var(--cream);
+        padding: 25px;
+        flex-direction: column;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .hero {
+        min-height: 600px;
+        background-position: 60% center;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .trust {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .about-grid,
+    .booking-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features,
+    .treatment-grid,
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .steps {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 35px;
+    }
+
+    .about-image img {
+        height: 350px;
+    }
+
+    section {
+        padding: 70px 0;
+    }
+
+    .secondary {
+        display: inline-block;
+        margin: 15px 0 0;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">ÉLAN.</div>
+
+<div class="nav-links" id="navLinks">
+<a href="#home">Home</a>
+<a href="#about">Our Doctor</a>
+<a href="#treatments">Treatments</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+<a href="#booking" class="btn">Book Consultation</a>
+</div>
+
+<div class="menu" onclick="toggleMenu()">☰</div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<div class="hero" id="home">
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="tag">Dermatology • Skin • Aesthetics</div>
+
+<h1>Doctor-led aesthetics.<br>Honest, natural results.</h1>
+
+<p>
+Personalised skin and aesthetic care guided by medical expertise.
+Because your skin deserves thoughtful attention, not promises.
+</p>
+
+<a href="#booking" class="btn">Book a Consultation →</a>
+
+<a href="#about" class="secondary">Meet the Doctor</a>
+
+</div>
+</div>
+</div>
+
+
+<!-- TRUST -->
+
+<div class="trust">
+
+<div>
+<h3>MD</h3>
+<p>Doctor's qualifications</p>
+</div>
+
+<div>
+<h3>10+</h3>
+<p>Years of experience</p>
+</div>
+
+<div>
+<h3>5000+</h3>
+<p>Patients treated</p>
+</div>
+
+<div>
+<h3>4.9 ★</h3>
+<p>Google rating</p>
+</div>
+
+</div>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container about-grid">
+
+<div class="about-image">
+
+<img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=900"
+alt="Doctor portrait">
+
+</div>
+
+<div class="about-text">
+
+<div class="tag">Meet Your Doctor</div>
+
+<h2>Expert care.<br>Personal attention.</h2>
+
+<p>
+At ÉLAN, we believe aesthetic treatments should begin
+with understanding your skin, your concerns and your goals.
+</p>
+
+<p>
+Our doctor-led approach focuses on evidence-based
+treatments, patient safety and natural-looking results.
+</p>
+
+<p>
+Every treatment plan is personalised following
+a proper medical consultation.
+</p>
+
+<a href="#booking" class="btn">Schedule a Consultation</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WHY US -->
+
+<section class="why">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="tag">The ÉLAN Difference</div>
+
+<h2>Care built around you.</h2>
+
+<p>
+Medical expertise and thoughtful treatment planning
+at every stage of your skin journey.
+</p>
+
+</div>
+
+<div class="features">
+
+<div class="feature">
+<span>✦</span>
+<h3>Doctor-led care</h3>
+<p>Every patient receives a medical assessment and an individual treatment plan.</p>
+</div>
+
+<div class="feature">
+<span>◇</span>
+<h3>Personalised plans</h3>
+<p>Treatments are selected according to individual skin concerns and suitability.</p>
+</div>
+
+<div class="feature">
+<span>✧</span>
+<h3>Advanced technology</h3>
+<p>Appropriate medical-grade technology selected according to clinical requirements.</p>
+</div>
+
+<div class="feature">
+<span>♡</span>
+<h3>Honest guidance</h3>
+<p>Clear expectations, transparent discussions and realistic treatment outcomes.</p>
+</div>
+
+<div class="feature">
+<span>✚</span>
+<h3>Safety first</h3>
+<p>Hygiene procedures and medical safety protocols are prioritised.</p>
+</div>
+
+<div class="feature">
+<span>◎</span>
+<h3>Ongoing support</h3>
+<p>Follow-up guidance to monitor progress and address concerns.</p>
+</div>
+
+</div>
+</div>
+
+</section>
+
+
+<!-- TREATMENTS -->
+
+<section id="treatments">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="tag">Our Treatments</div>
+
+<h2>Thoughtful care for every concern.</h2>
+
+<p>Explore our treatment categories and discover what may be appropriate for your skin.</p>
+
+</div>
+
+<div class="treatment-grid">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800">
+
+<div class="card-content">
+<h3>Skin Treatments</h3>
+<p>Acne, acne scars, pigmentation, chemical peels and skin rejuvenation.</p>
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800">
+
+<div class="card-content">
+<h3>Anti-ageing</h3>
+<p>Doctor-assessed options including Botox, fillers and skin boosters.</p>
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800">
+
+<div class="card-content">
+<h3>Laser Treatments</h3>
+<p>Laser hair reduction and selected skin resurfacing procedures.</p>
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=800">
+
+<div class="card-content">
+<h3>Hair Restoration</h3>
+<p>Hair loss assessment and suitable treatment options.</p>
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800">
+
+<div class="card-content">
+<h3>Skin Rejuvenation</h3>
+<p>Personalised approaches to improving skin texture and appearance.</p>
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800">
+
+<div class="card-content">
+<h3>Body Treatments</h3>
+<p>Consultation-based body contouring and aesthetic options.</p>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</section>
+
+
+<!-- REVIEWS -->
+
+<section class="reviews" id="reviews">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="tag">Patient Experiences</div>
+
+<h2>Trust built through care.</h2>
+
+<p>Read about the experiences of patients who have visited our clinic.</p>
+
+</div>
+
+<div class="review-grid">
+
+<div class="review">
+<div class="stars">★★★★★</div>
+<p>Patient testimonial placeholder. Replace this with a genuine review published with appropriate permission.</p>
+<strong>Patient review</strong>
+</div>
+
+<div class="review">
+<div class="stars">★★★★★</div>
+<p>Patient testimonial placeholder. Replace this with a genuine review published with appropriate permission.</p>
+<strong>Patient review</strong>
+</div>
+
+<div class="review">
+<div class="stars">★★★★★</div>
+<p>Patient testimonial placeholder. Replace this with a genuine review published with appropriate permission.</p>
+<strong>Patient review</strong>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROCESS -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="tag">Your Journey</div>
+
+<h2>Simple. Personal. Reassuring.</h2>
+
+</div>
+
+<div class="steps">
+
+<div class="step">
+<div class="number">01</div>
+<h3>Book</h3>
+<p>Schedule your consultation with our clinic.</p>
+</div>
+
+<div class="step">
+<div class="number">02</div>
+<h3>Consult</h3>
+<p>Discuss your concerns with the doctor.</p>
+</div>
+
+<div class="step">
+<div class="number">03</div>
+<h3>Plan</h3>
+<p>Receive a personalised treatment recommendation.</p>
+</div>
+
+<div class="step">
+<div class="number">04</div>
+<h3>Follow-up</h3>
+<p>Receive appropriate treatment and follow-up care.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section class="faq">
+
+<div class="container">
+
+<div class="section-title">
+<div class="tag">FAQs</div>
+<h2>Questions, answered.</h2>
+</div>
+
+<details>
+<summary>Do I need a consultation before treatment?</summary>
+<p>Yes. A consultation helps the doctor assess your concerns and determine appropriate treatment options.</p>
+</details>
+
+<details>
+<summary>Are treatments suitable for everyone?</summary>
+<p>No. Suitability depends on your medical history, skin condition and individual assessment.</p>
+</details>
+
+<details>
+<summary>How much do treatments cost?</summary>
+<p>Pricing depends on the treatment and individual requirements. Contact our clinic for details.</p>
+</details>
+
+<details>
+<summary>Will there be downtime?</summary>
+<p>Downtime varies depending on the procedure. Your doctor will explain this during consultation.</p>
+</details>
+
+</div>
+
+</section>
+
+
+<!-- BOOKING -->
+
+<section class="booking" id="booking">
+
+<div class="container booking-grid">
+
+<div class="booking-text">
+
+<div class="tag">Begin Your Journey</div>
+
+<h2>Your skin deserves expert attention.</h2>
+
+<p>
+Take the first step towards understanding your skin.
+Book a private consultation with our doctor.
+</p>
+
+<br>
+
+<p>📍 Golf Course Road, Gurgaon</p>
+<p>📞 +91 9206389638</p>
+<p>✉ hello@elanclinic.in</p>
+
+</div>
+
+<form id="bookingForm">
+
+<h3 style="font-size:28px;margin-bottom:25px;">
+Book a Consultation
+</h3>
+
+<input type="text" id="name" placeholder="Your Full Name" required>
+
+<input type="tel" id="phone" placeholder="Phone Number" pattern="[0-9]{10}" required>
+
+<input type="email" id="email" placeholder="Email Address">
+
+<select id="concern" required>
+<option value="">Select Your Concern</option>
+<option>Acne & Acne Scars</option>
+<option>Pigmentation</option>
+<option>Laser Hair Reduction</option>
+<option>Anti-ageing</option>
+<option>Hair Loss</option>
+<option>Other</option>
+</select>
+
+<input type="date" id="date">
+
+<textarea id="message" placeholder="Tell us about your concern (optional)"></textarea>
+
+<button type="submit" class="btn">
+Request Consultation →
+</button>
+
+<p style="font-size:11px;color:#777;margin-top:15px;">
+Your information will be used to respond to your appointment request.
+Please avoid sharing sensitive medical details through this form.
+</p>
+
+</form>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer id="contact">
+
+<div class="footer-grid">
+
+<div>
+<h3>ÉLAN.</h3>
+<p>Doctor-led skin and aesthetic care.</p>
+<p>Golf Course Road, Gurgaon, Haryana</p>
+</div>
+
+<div>
+<h3>Explore</h3>
+<p><a href="#about">Our Doctor</a></p>
+<p><a href="#treatments">Treatments</a></p>
+<p><a href="#reviews">Patient Experiences</a></p>
+</div>
+
+<div>
+<h3>Contact</h3>
+<p>+91 XXXXX XXXXX</p>
+<p>hello@elanclinic.in</p>
+<p>Mon - Sat: 10 AM - 7 PM</p>
+</div>
+
+</div>
+
+<div class="disclaimer">
+Information on this website is for general awareness and does not replace medical advice.
+Treatment suitability and results vary between individuals.
+All credentials, patient numbers, ratings and treatment claims must be verified before publication.
+<br><br>
+© 2026 ÉLAN Clinic. All rights reserved.
+</div>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a class="whatsapp"
+href="https://wa.me/919206389638"
+target="_blank">
+WhatsApp Us
+</a>
+
+
+<script>
+
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+}
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        document.getElementById("navLinks").classList.remove("active");
+    });
+});
+
+document.getElementById("bookingForm").addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const email = document.getElementById("email").value;
+    const concern = document.getElementById("concern").value;
+    const date = document.getElementById("date").value;
+
+    const clinicNumber = "919206389638";
+
+    const message =
+    `Hello, I would like to request a consultation.
+
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+Concern: ${concern}
+Preferred Date: ${date}`;
+
+    const whatsappURL =
+    `https://wa.me/${clinicNumber}?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappURL, "_blank");
+
+});
+
+</script>
+
+</body>
+</html>
